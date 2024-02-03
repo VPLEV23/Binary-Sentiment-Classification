@@ -58,19 +58,21 @@ EPAM_PROJECT/
 ├── requirements.txt # Python dependencies required for the project
 ```
   ## Table of Contents 
-   - [Overview](#overview)
-    - [Data](#data) 
-    - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda) 
-    - [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing) 
-    - [Model Building and Evaluation](#model-building-and-evaluation) 
-   - [Downloading GloVe Word Embeddings](#downloading-glove-word-embeddings) 
-    - [Getting Started](#getting-started) 
-      - [Setting Up a Local Environment](#setting-up-a-local-environment)
-      - [Running the Application](#running-the-application) 
-    - [Using Docker](#using-docker) 
-      - [Building the Docker Containers](#building-the-docker-containers) 
-      - [Running the Docker Containers](#running-the-docker-containers) 
-    - [Continuous Integration](#continuous-integration)
+- [Overview](#overview)
+- [Data](#data)
+- [DS part Report](#ds-part-report) 
+	- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda) 
+	- [Data Cleaning and Preprocessing](#data-cleaning-and-preprocessing) 
+	- [Model Building and Evaluation](#model-building-and-evaluation) 
+	- [Downloading GloVe Word Embeddings](#downloading-glove-word-embeddings)
+- [MLE Part](#mle-part) 
+	- [Getting Started](#getting-started) 
+	- [Setting Up a Local Environment](#setting-up-a-local-environment)
+	- [Running the Application](#running-the-application)
+	- [Using Docker](#using-docker) 
+		- [Building the Docker Containers](#building-the-docker-containers) 
+		- [Running the Docker Containers](#running-the-docker-containers) 
+	- [Continuous Integration](#continuous-integration)
 
 
 ## Overview
@@ -217,6 +219,7 @@ Please ensure you have sufficient storage space available, as these files can be
 
 Note: The use of the GloVe embeddings is subject to the terms of use provided by the Stanford NLP Group.
 
+# MLE Part
 
 ## Getting Started
 
@@ -268,26 +271,26 @@ python -m src.main
 Note: This will be satrt downloading data automaticly
 
 2. Run all scripts separately
-   - To downlaod data use:
-     ```bash
-      python .\src\data_load.py
-      ```
+	- To downlaod data use:
+     		```bash
+      		python .\src\data_load.py
+      		```
 	-  To run EDA script use:
 		  ```bash 
 		python .\src\eda.py 
 		```
-	  -  To run data_preprocessing script use
-			```bash 
-			python .\src\data_preprocessing\data_preprocessing.py
-			```
-		-   To run training script use:
-			```bash 
-			python .\src\train\train.py
-			```
-		- To run inference script use
-			```bash 
-			python .\src\inference\run_inference.py
-			```
+	-  To run data_preprocessing script use
+	  	 ```bash 
+	  	 python .\src\data_preprocessing\data_preprocessing.py
+	  	 ```
+	-   To run training script use:
+	  	```bash 
+		python .\src\train\train.py
+		```
+	- To run inference script use
+		```bash 
+		python .\src\inference\run_inference.py
+		```
 ### Running Tests
 
 Execute the following command to run unit tests:
