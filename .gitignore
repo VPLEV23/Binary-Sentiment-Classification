@@ -9,6 +9,8 @@ models/
 results/
 mlruns/
 outputs/
+glove/
+
 # My local enviremnt for work
 myenv/ 
 
