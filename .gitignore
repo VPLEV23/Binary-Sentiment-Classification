@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+.vscode
+
+# Directories
+data/
+models/
+results/
+mlruns/
+outputs/
+# My local enviremnt for work
+myenv/ 
+
+# File Extensions
+*.csv
+*.pickle
+*.pyc
+
+# Environment Variables
+.env
+
+# Installer logs
+pip-log.txt
