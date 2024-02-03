@@ -256,6 +256,8 @@ pip install -r requirements.txt
 ```
 ### Running the Application
 
+**Note: Run all comads from root directory of the project !!!!**
+
 ###  Dataset Download Instructions 
 To download the dataset, please run the `data_load.py` script located in the root of the project. This script will automatically download the dataset and place it in the `data/raw/` directory.
 ```bash
@@ -302,11 +304,11 @@ python -m unittest discover -s src/tests
 ### Building the Docker Containers
 - For the training process:
 ```bash 
-docker build -t my_train_image -f train/Dockerfile .
+docker build -t my_train_image -f src/train/Dockerfile .
 ```
 - For the inference process:
  ```bash 
-docker build -t my_inference_image -f inference/Dockerfile .
+docker build -t my_inference_image -f src/inference/Dockerfile .
 ```
 
 ## Running the Docker Containers
