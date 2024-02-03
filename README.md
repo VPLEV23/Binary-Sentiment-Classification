@@ -3,7 +3,7 @@
 
 # Project Directory Structure 
 Below is an outline of the directory structure for the EPAM_PROJECT, providing an overview of how the files and folders are organized:
-
+```
 EPAM_PROJECT/
 │
 ├── .github/ # GitHub Actions configurations
@@ -56,7 +56,7 @@ EPAM_PROJECT/
 ├── .gitignore # Specifies files to be ignored by Git
 ├── README.md # Project README with detailed instructions
 ├── requirements.txt # Python dependencies required for the project
-
+```
   ## Table of Contents 
    - [Overview](#overview)
     - [Data](#data) 
