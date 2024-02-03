@@ -274,9 +274,9 @@ python -m src.main
 
 2. Run all scripts separately
 	- To downlaod data use:
-     		```bash
-      		python .\src\data_load.py
-      		```
+  		```bash
+  		python .\src\data_load.py
+ 		 ```
 	-  To run EDA script use:
 		  ```bash 
 		python .\src\eda.py 
