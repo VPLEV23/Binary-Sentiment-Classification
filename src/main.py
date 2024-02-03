@@ -3,6 +3,7 @@ import os
 import sys
 
 # Update your imports to use the package structure
+from src.data_load import main as data_load_main
 from src.data_preprocessing.data_preprocessing import main as preprocess_main
 from src.train.train import main as train_main
 from src.inference.run_inference import main as inference_main
@@ -10,6 +11,11 @@ from src.eda import main as eda_main
 from src.utils import get_data_path, get_output_path, get_logger
 
 def main():
+    
+    # Step 0: Load Data
+    print("Loading data...")
+    data_load_main()
+
     # Step 1: Exploratory Data Analysis
     print("Starting EDA...")
     eda_main()
