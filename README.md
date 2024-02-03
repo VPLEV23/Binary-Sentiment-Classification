@@ -268,7 +268,7 @@ From root directory of project run:
 ```bash 
 python -m src.main
 ```
-Note: This will be satrt downloading data automaticly
+**Note: This will start downloading data automaticly**
 
 2. Run all scripts separately
 	- To downlaod data use:
