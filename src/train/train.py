@@ -75,7 +75,11 @@ def main():
     figures_output_dir = get_output_path('figures')
     os.makedirs(figures_output_dir, exist_ok=True)
 
+    models_output_dir = get_output_path('models')
+    os.makedirs(models_output_dir, exist_ok=True)
+
     best_accuracy = 0
+    best_model = None
     best_model_name = ""
 
     # Train and evaluate each model
@@ -83,10 +87,14 @@ def main():
         accuracy = train_evaluate_model(model, name, X_train_tfidf, X_test_tfidf, y_train, y_test, figures_output_dir)
         if accuracy > best_accuracy:
             best_accuracy = accuracy
+            best_model = model
             best_model_name = name
 
     logger.info(f"Best Model: {best_model_name} with Accuracy: {best_accuracy}")
     
+    best_model_path = os.path.join(models_output_dir, f'{best_model_name}_best_model.pkl')
+    joblib.dump(best_model, best_model_path)
+
     vectorizer_path = os.path.join(get_output_path('models'), 'tfidf_vectorizer.pkl')
     joblib.dump(tfidf_vectorizer, vectorizer_path)
 

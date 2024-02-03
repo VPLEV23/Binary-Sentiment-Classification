@@ -11,7 +11,7 @@ from utils import get_data_path, get_output_path, get_logger
 logger = get_logger(__name__)
 
 def load_model(model_path):
-    return mlflow.sklearn.load_model(model_path)
+    return joblib.load(model_path)
 
 def main():
     # Load the best model
