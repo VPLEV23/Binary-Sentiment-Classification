@@ -322,6 +322,12 @@ python -m unittest discover -s src/tests
 ```
 ## Using Docker
 
+The following instructions will guide you on how to use Docker to run the training and inference processes for this project.
+
+### Prerequisites
+
+Ensure you have Docker installed on your system. You can download it from the [official Docker website](https://www.docker.com/products/docker-desktop).
+
 ### Building the Docker Containers
 - For the training process:
 ```bash 
@@ -333,12 +339,6 @@ docker build -t my_inference_image -f src/inference/Dockerfile .
 ```
 
 ## Running the Docker Containers
-
-The following instructions will guide you on how to use Docker to run the training and inference processes for this project.
-
-### Prerequisites
-
-Ensure you have Docker installed on your system. You can download it from the [official Docker website](https://www.docker.com/products/docker-desktop).
 
 ### Running the Training Process
 
