@@ -1,7 +1,7 @@
 import os
 import sys
 import pandas as pd
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from sklearn.feature_extraction.text import TfidfVectorizer
 import mlflow.sklearn
 import joblib
@@ -34,14 +34,32 @@ def main():
 
     # Calculate accuracy
     accuracy = accuracy_score(y_true, predictions)
-    logger.info(f"Accuracy: {accuracy}")
+    precision, recall, fscore, _ = precision_recall_fscore_support(y_true, predictions, average='weighted')
 
+    # Log metrics
+    logger.info(f"Accuracy: {accuracy}")
+    logger.info(f"Precision: {precision}")
+    logger.info(f"Recall: {recall}")
+    logger.info(f"F1-Score: {fscore}")
     # Log or process predictions as needed
     logger.info(f"First few predictions: {predictions[:5]}")
 
-    # Optionally, save the predictions to a file
-    predictions_output_path = os.path.join(get_output_path('predictions'), 'predictions.csv')
-    os.makedirs(os.path.dirname(predictions_output_path), exist_ok=True)
+    # Ensure the predictions directory exists
+    predictions_dir = os.path.join(get_output_path('predictions'))
+    os.makedirs(predictions_dir, exist_ok=True)
+
+    # Save metrics to a file
+    metrics_output_path = os.path.join(predictions_dir, 'metrics.txt')
+    with open(metrics_output_path, 'w') as file:
+        file.write(f"Accuracy: {accuracy}\n")
+        file.write(f"Precision: {precision}\n")
+        file.write(f"Recall: {recall}\n")
+        file.write(f"F1-Score: {fscore}\n")
+
+    logger.info(f"Metrics saved to {metrics_output_path}")
+
+    # Save predictions to a file
+    predictions_output_path = os.path.join(predictions_dir, 'predictions.csv')
     pd.DataFrame(predictions, columns=['Predictions']).to_csv(predictions_output_path, index=False)
 
     logger.info(f"Predictions saved to {predictions_output_path}")
