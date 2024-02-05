@@ -209,7 +209,7 @@ Potential business applications of binary sentiment classification, especially i
 	- **Value**: Enhance recommendation systems by incorporating sentiment analysis to suggest products, services, or content that resonates with individual preferences.
 6. **Content Moderation**:
 	- **Value**: Identify and filter out negative content that could harm community standards on platforms, maintaining a positive environment.
-7. Social Media Analysis:
+7. **Social Media Analysis**:
 	- **Value**: Gauge public opinion on marketing campaigns, product launches, and brand events to measure impact and engagement.
 8. **Financial Market Prediction**:
 	- **Value**: Analyze sentiment in news articles, reports, and social media to inform financial market predictions and investment strategies.
