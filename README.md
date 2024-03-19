@@ -2,9 +2,9 @@
 # Binary Sentiment Classification
 
 # Project Directory Structure 
-Below is an outline of the directory structure for the EPAM_PROJECT, providing an overview of how the files and folders are organized:
+Below is an outline of the directory structure for the Binary-Sentiment-Classification, providing an overview of how the files and folders are organized:
 ```
-EPAM_PROJECT/
+Binary-Sentiment-Classification/
 │
 ├── .github/ # GitHub Actions configurations
 │ └── workflows/
